@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alfabetização Digital</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🌐 Alfabetização Digital</div>
+    </header>
+
+    <main>
+
+        <section class="boas-vindas">
+            <h1>Bem-vindo(a)!</h1>
+
+            <p>
+                Aprenda a utilizar a tecnologia de forma simples,
+                segura e prática.
+            </p>
+
+            <p>
+                Escolha um módulo abaixo e comece a aprender.
+            </p>
+        </section>
+
+        <section class="modulos">
+
+            <h2>📚 Módulos de aprendizagem</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <span class="icone">📱</span>
+                    <h3>Conhecendo o celular e computador</h3>
+                    <p>
+                        Aprenda conceitos básicos para utilizar
+                        seus dispositivos.
+                    </p>
+
+                    <a href="/modulo/1">Começar módulo</a>
+                </div>
+
+
+                <div class="card">
+                    <span class="icone">🔎</span>
+                    <h3>Pesquisando na Internet</h3>
+                    <p>
+                        Aprenda a realizar pesquisas e encontrar
+                        informações na Internet.
+                    </p>
+
+                    <a href="/modulo/2">Começar módulo</a>
+                </div>
+
+
+                <div class="card">
+                    <span class="icone">💬</span>
+                    <h3>Comunicação digital</h3>
+                    <p>
+                        Aprenda a utilizar ferramentas de comunicação
+                        como aplicativos de mensagens.
+                    </p>
+
+                    <a href="/modulo/3">Começar módulo</a>
+                </div>
+
+
+                <div class="card">
+                    <span class="icone">🔐</span>
+                    <h3>Segurança na Internet</h3>
+                    <p>
+                        Aprenda cuidados importantes para navegar
+                        com mais segurança.
+                    </p>
+
+                    <a href="/modulo/4">Começar módulo</a>
+                </div>
+
+
+                <div class="card">
+                    <span class="icone">🏛️</span>
+                    <h3>Serviços digitais</h3>
+                    <p>
+                        Conheça formas de utilizar serviços públicos
+                        e outras ferramentas digitais.
+                    </p>
+
+                    <a href="/modulo/5">Começar módulo</a>
+                </div>
+
+            </div>
+
+        </section>
+
+        <section class="quiz-chamada">
+
+            <h2>📝 Teste seus conhecimentos</h2>
+
+            <p>
+                Depois de estudar os módulos, faça o quiz final
+                para verificar seus conhecimentos.
+            </p>
+
+            <a class="botao-quiz" href="/quiz">
+                Fazer o quiz
+            </a>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Projeto de Alfabetização Digital</p>
+    </footer>
+
+</body>
+
+</html>

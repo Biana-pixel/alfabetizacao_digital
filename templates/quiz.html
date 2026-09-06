@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Quiz - Alfabetização Digital</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🌐 Alfabetização Digital</div>
+    </header>
+
+    <main>
+
+        <section class="quiz">
+
+            <div class="quiz-cabecalho">
+                <span>📝</span>
+                <h1>Quiz de Alfabetização Digital</h1>
+
+                <p>
+                    Responda às perguntas abaixo para verificar
+                    seus conhecimentos.
+                </p>
+            </div>
+
+            <form id="quizForm">
+
+                <!-- PERGUNTA 1 -->
+
+                <div class="pergunta">
+
+                    <h2>1. O que devemos fazer para pesquisar uma informação na Internet?</h2>
+
+                    <label>
+                        <input type="radio" name="q1" value="a">
+                        Procurar a informação em um mecanismo de pesquisa.
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q1" value="b">
+                        Clicar em qualquer link recebido.
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q1" value="c">
+                        Informar nossa senha para realizar a pesquisa.
+                    </label>
+
+                </div>
+
+
+                <!-- PERGUNTA 2 -->
+
+                <div class="pergunta">
+
+                    <h2>2. O que devemos fazer quando recebemos uma mensagem suspeita?</h2>
+
+                    <label>
+                        <input type="radio" name="q2" value="a">
+                        Clicar imediatamente no link.
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q2" value="b">
+                        Verificar a mensagem e evitar fornecer dados pessoais.
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q2" value="c">
+                        Enviar nossa senha para confirmar nossa identidade.
+                    </label>
+
+                </div>
+
+
+                <!-- PERGUNTA 3 -->
+
+                <div class="pergunta">
+
+                    <h2>3. Qual destas informações nunca deve ser compartilhada com desconhecidos?</h2>
+
+                    <label>
+                        <input type="radio" name="q3" value="a">
+                        Uma notícia pública.
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q3" value="b">
+                        O nome de uma cidade.
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q3" value="c">
+                        Uma senha pessoal.
+                    </label>
+
+                </div>
+
+
+                <!-- PERGUNTA 4 -->
+
+                <div class="pergunta">
+
+                    <h2>4. Qual é uma forma de comunicação digital?</h2>
+
+                    <label>
+                        <input type="radio" name="q4" value="a">
+                        Aplicativo de mensagens.
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q4" value="b">
+                        Caderno.
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q4" value="c">
+                        Televisão desligada.
+                    </label>
+
+                </div>
+
+
+                <!-- PERGUNTA 5 -->
+
+                <div class="pergunta">
+
+                    <h2>5. Ao acessar um serviço digital, qual cuidado é importante?</h2>
+
+                    <label>
+                        <input type="radio" name="q5" value="a">
+                        Utilizar qualquer site encontrado.
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q5" value="b">
+                        Verificar se o site é oficial e confiável.
+                    </label>
+
+                    <label>
+                        <input type="radio" name="q5" value="c">
+                        Compartilhar seus dados com qualquer pessoa.
+                    </label>
+
+                </div>
+
+
+                <button type="button" onclick="corrigirQuiz()">
+                    Ver meu resultado
+                </button>
+
+            </form>
+
+
+            <div id="resultado" class="resultado"></div>
+
+
+            <div class="quiz-navegacao">
+
+                <a href="/" class="botao-voltar">
+                    ← Voltar para os módulos
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>Projeto de Alfabetização Digital</p>
+    </footer>
+
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>

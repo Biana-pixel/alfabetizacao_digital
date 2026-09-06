@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Módulo de Aprendizagem</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">🌐 Alfabetização Digital</div>
+    </header>
+
+    <main>
+
+        <section class="modulo-conteudo">
+
+            {% if numero == 1 %}
+
+                <span class="icone-grande">📱</span>
+
+                <h1>Conhecendo o celular e o computador</h1>
+
+                <p class="introducao">
+                    Neste módulo, você aprenderá alguns conceitos básicos
+                    para utilizar celulares e computadores com mais autonomia.
+                </p>
+
+                <h2>O que vamos aprender?</h2>
+
+                <ul>
+                    <li>Ligar e desligar o dispositivo.</li>
+                    <li>Identificar aplicativos.</li>
+                    <li>Abrir o navegador.</li>
+                    <li>Utilizar o teclado.</li>
+                    <li>Voltar para a tela inicial.</li>
+                </ul>
+
+                <div class="atividade">
+                    <h2>🧪 Atividade prática</h2>
+
+                    <p>
+                        Agora é sua vez! Tente realizar as seguintes ações:
+                    </p>
+
+                    <ol>
+                        <li>Abra o navegador.</li>
+                        <li>Digite uma palavra na barra de pesquisa.</li>
+                        <li>Faça uma pesquisa.</li>
+                        <li>Volte para a tela inicial.</li>
+                    </ol>
+                </div>
+
+
+            {% elif numero == 2 %}
+
+                <span class="icone-grande">🔎</span>
+
+                <h1>Pesquisando na Internet</h1>
+
+                <p class="introducao">
+                    Aprenda a realizar pesquisas na Internet e encontrar
+                    informações de maneira mais segura.
+                </p>
+
+                <h2>O que vamos aprender?</h2>
+
+                <ul>
+                    <li>Utilizar mecanismos de pesquisa.</li>
+                    <li>Escolher palavras para realizar uma busca.</li>
+                    <li>Comparar informações encontradas.</li>
+                    <li>Identificar informações suspeitas.</li>
+                </ul>
+
+                <div class="atividade">
+                    <h2>🧪 Atividade prática</h2>
+
+                    <p>
+                        Pesquise na Internet uma informação de seu interesse.
+                        Depois, observe o nome do site e verifique se a
+                        informação parece confiável.
+                    </p>
+                </div>
+
+
+            {% elif numero == 3 %}
+
+                <span class="icone-grande">💬</span>
+
+                <h1>Comunicação digital</h1>
+
+                <p class="introducao">
+                    Aprenda a utilizar ferramentas digitais para manter
+                    contato com familiares e amigos.
+                </p>
+
+                <h2>O que vamos aprender?</h2>
+
+                <ul>
+                    <li>Enviar mensagens.</li>
+                    <li>Enviar imagens.</li>
+                    <li>Realizar chamadas de vídeo.</li>
+                    <li>Identificar mensagens suspeitas.</li>
+                </ul>
+
+                <div class="atividade">
+                    <h2>🧪 Atividade prática</h2>
+
+                    <p>
+                        Abra seu aplicativo de mensagens e envie uma mensagem
+                        para uma pessoa conhecida.
+                    </p>
+                </div>
+
+
+            {% elif numero == 4 %}
+
+                <span class="icone-grande">🔐</span>
+
+                <h1>Segurança na Internet</h1>
+
+                <p class="introducao">
+                    Aprenda cuidados importantes para proteger seus dados
+                    pessoais durante o uso da Internet.
+                </p>
+
+                <h2>Cuidados importantes</h2>
+
+                <ul>
+                    <li>Não compartilhar senhas.</li>
+                    <li>Desconfiar de mensagens suspeitas.</li>
+                    <li>Evitar clicar em links desconhecidos.</li>
+                    <li>Verificar o endereço dos sites.</li>
+                </ul>
+
+                <div class="atividade">
+                    <h2>🧪 Atividade prática</h2>
+
+                    <p>
+                        Imagine que você recebeu uma mensagem dizendo que
+                        ganhou um prêmio e pedindo sua senha.
+                    </p>
+
+                    <p>
+                        <strong>
+                            Você deve fornecer sua senha?
+                        </strong>
+                    </p>
+
+                    <p>
+                        ❌ Não. Nunca compartilhe sua senha com desconhecidos.
+                    </p>
+                </div>
+
+
+            {% elif numero == 5 %}
+
+                <span class="icone-grande">🏛️</span>
+
+                <h1>Serviços digitais</h1>
+
+                <p class="introducao">
+                    Conheça possibilidades de utilização de serviços
+                    digitais no dia a dia.
+                </p>
+
+                <h2>O que vamos aprender?</h2>
+
+                <ul>
+                    <li>Pesquisar informações de serviços públicos.</li>
+                    <li>Acessar sites oficiais.</li>
+                    <li>Pesquisar informações utilizando o navegador.</li>
+                    <li>Ter cuidado com informações falsas.</li>
+                </ul>
+
+                <div class="atividade">
+                    <h2>🧪 Atividade prática</h2>
+
+                    <p>
+                        Escolha um serviço que você utiliza e procure
+                        informações sobre ele utilizando um site oficial.
+                    </p>
+                </div>
+
+            {% else %}
+
+                <h1>Módulo não encontrado</h1>
+
+                <p>
+                    O módulo solicitado não está disponível.
+                </p>
+
+            {% endif %}
+
+            <div class="navegacao">
+
+                <a href="/" class="botao-voltar">
+                    ← Voltar para os módulos
+                </a>
+
+                {% if numero < 5 %}
+                    <a href="/modulo/{{ numero + 1 }}" class="botao-proximo">
+                        Próximo módulo →
+                    </a>
+                {% else %}
+                    <a href="/quiz" class="botao-proximo">
+                        Fazer o quiz →
+                    </a>
+                {% endif %}
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Projeto de Alfabetização Digital</p>
+    </footer>
+
+</body>
+
+</html>
